@@ -1,8 +1,7 @@
 ---
 name: shaper-skill
-version: 4.4.1
-vault_dependency: optional
-description: "외부 독자가 바로 읽는 보고서·기획안·제안서 본문 작성 스킬. 추상어를 줄이고 결론, 근거, 문장 연결, 격식체를 정리한다. P1: 산출물, 보고서, 기획안, 제안서, 글쓰기, 비즈문서. P2: 써줘, 작성해줘, 정리해줘, 다듬어줘. P3: narrative gate, humanize, formality, business document. P5: md파일로, 보고서로. NOT: 제출 전 흔적 제거(→submission-cleanup), 카피(→copywriting-skill), 사업계획서(→bp-guide)."
+description: |
+  외부 독자가 바로 읽는 보고서·기획안·제안서 본문 작성 스킬. 추상어를 줄이고 결론, 근거, 문장 연결, 격식체를 정리한다. 트리거: 산출물, 보고서, 기획안, 제안서, 글쓰기, 비즈문서, 써줘, 작성해줘, 정리해줘, 다듬어줘. NOT: 제출 전 흔적 제거(→submission-cleanup), 카피(→copywriting-skill), 사업계획서(→bp-guide).
 license: Proprietary
 ---
 
