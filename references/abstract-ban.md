@@ -1,5 +1,7 @@
 # ABSTRACT_BAN — 추상명사 차단 정본 (v4.3, INV 29)
 
+> 상위 정본: `references/writing-standard.md` §2 문장. 본 문서는 해당 섹션의 세부 백본.
+
 §B-PRE ⑩번째 룰. 본문 추상명사 차단·UTTER 블록만 ALLOW.
 
 정본 BAN 리스트는 `lexicon-ban.md §2-9` 참조. 본 파일 = SKILL.md §B-PRE ⑩에서 호출되는 운영 가이드.

@@ -1,5 +1,7 @@
 # KIWI_GRAMMAR — KIWI 글쓰기 문법·구조 정본 (v4.0, INV 25)
 
+> 상위 정본: `references/writing-standard.md` §2 문장. 본 문서는 해당 섹션의 세부 백본.
+
 KIWI 5법칙 중 **문법·구조 부분만** 단독 정본. 어휘 BAN 부분(것·도·등·자신없는·한자투·강조부사·과잉감정)은 `lexicon-ban.md`로 이관.
 
 기존 `kiwi-writing-rules.md`는 `_archive/`로 이동, verbatim 보존.

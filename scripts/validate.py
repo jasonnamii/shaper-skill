@@ -6,7 +6,8 @@ paper-engine self-check validator (v2.5).
     python scripts/validate.py .                       # SKILL.md 자체 검증
     python scripts/validate.py --check-output FILE     # 산출물 NO_WORK_LABEL 스캔 (보조)
 
-NO_WORK_LABEL 본질 — references/no-work-label.md
+NO_WORK_LABEL — 사람용 정본 references/writing-standard.md §3 표현금지
+  세부 백본: references/no-work-label.md
   본질 게이트는 LLM 자체 판정질문: "이 단어, 이 대화 밖 사람이 사전 없이 읽을 수 있나?"
   본 스캐너는 자주 새는 단어를 사전·패턴으로 잡는 '보조 게이트'.
 

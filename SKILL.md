@@ -1,5 +1,7 @@
 ---
 name: shaper-skill
+version: 4.5
+vault_dependency: none
 description: |
   외부 독자가 바로 읽는 보고서·기획안·제안서 본문 작성 스킬. 추상어를 줄이고 결론, 근거, 문장 연결, 격식체를 정리한다. 트리거: 산출물, 보고서, 기획안, 제안서, 글쓰기, 비즈문서, 써줘, 작성해줘, 정리해줘, 다듬어줘. NOT: 제출 전 흔적 제거(→submission-cleanup), 카피(→copywriting-skill), 사업계획서(→bp-guide).
 license: Proprietary
@@ -13,13 +15,15 @@ license: Proprietary
 
 산출물에는 작업용 라벨, 내부 규칙명, 스킬명, 모델명을 남기지 않는다. 독자가 사전 없이 읽을 수 없는 표현은 평문으로 바꾼다. 단, 업계 표준 약어와 고유명사는 유지한다.
 
-## 절대 규칙
+## 작성·퇴고 기본 기준
 
-1. 첫 문단에 결론이나 판단을 둔다.
-2. 문단마다 주장과 근거를 붙인다.
-3. 추상명사는 실제 행위, 수치, 장면, 결정으로 풀어쓴다.
-4. 외부 독자용 문서는 초안 이력이나 내부 대화에 의존하지 않는다.
-5. 격식체 문서는 끝까지 같은 높임과 문장 밀도를 유지한다.
+사람용 단일 정본은 `references/writing-standard.md`. 5섹션이 작성·퇴고의 기준이다.
+
+1. **문체** — 입니다체 기본. 짧고 단정하게. 업무용 문서처럼 자연스럽게 읽힌다.
+2. **문장** — AI식 일반론·과장·추상어·번역체를 제거한다. 한 문장에 판단 하나.
+3. **표현금지** — 내부작업·메모·지시어·AI/프롬프트/스킬어를 노출하지 않는다. 연결어는 필요할 때만.
+4. **독자** — 작성자가 아니라 독자 순서로. 결론·이유·효과·다음 행동을 먼저 둔다.
+5. **읽힘** — 훑어도 구조가 보인다. 제목·첫 문장만 읽어도 흐름이 잡힌다. 가볍게 읽힌다.
 
 ## 모드
 
@@ -44,12 +48,12 @@ license: Proprietary
 
 references/ 자료는 모두 읽고 시작하지 않는다. 문서 유형과 문제에 맞는 항목만 선택한다.
 
-- `references/pre-write-guard.md`
-- `references/biz-doc-mode.md`
-- `references/formality-gate.md`
-- `references/humanize-gate.md`
-- `references/narr-gate.md`
-- `references/no-work-label.md`
+- `references/writing-standard.md` — 5섹션 사람용 정본 (먼저 본다)
+- `references/formality-gate.md` (§1 문체 백본)
+- `references/lexicon-ban.md`·`references/abstract-ban.md`·`references/kiwi-grammar.md` (§2 문장 백본)
+- `references/no-work-label.md`·`references/humanize-gate.md` (§3 표현금지 백본)
+- `references/biz-doc-mode.md`·`references/pre-write-guard.md`·`references/narr-gate.md` (§4 독자 백본)
+- `references/hero-format.md`·`references/doc-types.md` (§5 읽힘 백본)
 
 ## 출력
 
@@ -64,6 +68,7 @@ references/ 자료는 모두 읽고 시작하지 않는다. 문서 유형과 문
 
 ## CHANGELOG
 
+- 4.5: 작성·퇴고 기본 기준 5섹션(문체·문장·표현금지·독자·읽힘)을 사람용 단일 정본(`references/writing-standard.md`)으로 도입. 허브 절대규칙·Self-Check를 5섹션에 정합시키고 기존 BAN 사전·스크립트를 섹션 백본으로 재매핑했다. grep 워드리스트는 보존했다.
 - 4.4.1: Codex 패키징용 슬림 허브. 긴 본문 규칙은 references로 위임하고 validator 실패 요인을 제거했다.
 
 ## Gotchas
@@ -75,9 +80,10 @@ references/ 자료는 모두 읽고 시작하지 않는다. 문서 유형과 문
 | 문장만 매끈하게 만들기 | 결론과 근거 연결을 먼저 고친다 |
 | ❌ 내부 작업어를 산출물에 남김 | ✅ 독자가 바로 읽는 평문으로 바꿈 |
 
-## Self-Check
+## Self-Check (5섹션 대응)
 
-- 첫 문단만 읽어도 방향이 보이는가?
-- 내부 작업어가 남지 않았는가?
-- 추상어가 실제 판단이나 행동으로 바뀌었는가?
-- 원문 의도와 격식 수준을 보존했는가?
+- §1 문체 — 입니다체로 끝까지 단정하게, 업무용 문서처럼 읽히는가?
+- §2 문장 — AI식 일반론·과장·추상어·번역체를 지웠고, 한 문장에 판단이 하나인가?
+- §3 표현금지 — 내부작업어·AI/프롬프트/스킬어가 남지 않았는가?
+- §4 독자 — 결론·이유·효과·다음 행동이 독자 순서로 먼저 오는가?
+- §5 읽힘 — 제목·첫 문장만 읽어도 흐름이 잡히고 가볍게 읽히는가?

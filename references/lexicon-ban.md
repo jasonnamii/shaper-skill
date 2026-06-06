@@ -1,5 +1,7 @@
 # LEXICON_BAN — 어휘 BAN 통합 정본 (v4.0, INV 16)
 
+> 상위 정본: `references/writing-standard.md` §2 문장. 본 문서는 해당 섹션의 세부 백본.
+
 산출물 어휘 BAN 1정본. **v4.0 통폐합:** banwords-lexicon.md + up-ban-dictionary.md (어휘부분) + kiwi-writing-rules.md (어휘부분) → 본 파일.
 
 기존 3종은 `_archive/`로 이동, verbatim 보존.

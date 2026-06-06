@@ -1,5 +1,7 @@
 # NO_WORK_LABEL — 본질보호 게이트 (v2.5 신규, INV 13)
 
+> 상위 정본: `references/writing-standard.md` §3 표현금지. 본 문서는 해당 섹션의 세부 백본.
+
 산출물·대화 모두에 적용. 작업 라벨 ZERO. 1만 페이지에 1단어라도 = FAIL → 전수 재작성.
 
 이 문서는 SKILL.md INV 13의 단일 권위. validate.py 사전·패턴은 이 본질의 *보조*일 뿐.

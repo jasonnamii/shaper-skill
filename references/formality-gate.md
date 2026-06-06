@@ -1,5 +1,7 @@
 # FORMALITY_GATE — 격식 통합 정본 (v4.0, INV 22)
 
+> 상위 정본: `references/writing-standard.md` §1 문체. 본 문서는 해당 섹션의 세부 백본.
+
 산출물 격식 1정본. **v4.0 통폐합:** imnida-gate.md (입니다체) + relation-formality.md (관계격식 4LV) → 본 파일.
 
 기존 2종은 `_archive/`로 이동, verbatim 보존.

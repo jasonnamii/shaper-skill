@@ -1,16 +1,61 @@
 {
+  "version": "4.5",
+  "skill": "shaper-skill",
+  "standard": "references/writing-standard.md (5섹션)",
   "cases": [
     {
-      "input": "기획안 초안을 외부 독자용으로 정리해줘",
-      "expect": "초안 이력 없이 결론부터 정리한 비즈문서"
+      "id": "S2_ai_lex_hit",
+      "section": "2 문장",
+      "description": "AI식 일반론·과장·컨설팅투 검출 (AI_LEX·ADV_BAN)",
+      "input": "결론적으로 이것은 매우 혁신적인 솔루션 기반 접근이라고 할 수 있다.",
+      "expected_status": "FAIL",
+      "expected_min_high": 1,
+      "test_command": "python3 scripts/humanize_check.py {input_file}"
     },
     {
-      "input": "이 문장을 자연스럽게 다듬어줘",
-      "expect": "원뜻을 보존한 자연스러운 격식체 문장"
+      "id": "S3_label_hit",
+      "section": "3 표현금지",
+      "description": "작업라벨 검출 (LABEL_BAN — N축·Phase N)",
+      "input": "이 모델은 4축, 다음은 Phase 1.",
+      "expected_status": "FAIL",
+      "expected_min_high": 1,
+      "test_command": "python3 scripts/humanize_check.py {input_file}"
     },
     {
-      "input": "보고서 본문 써줘",
-      "expect": "결론, 근거, 처방이 분리된 완성 본문"
+      "id": "S1_ida_hit",
+      "section": "1 문체",
+      "description": "입니다체 면제 영역 외 이다체 종결 검출 (IDA)",
+      "input": "분석한다. 정리한다.",
+      "expected_status": "FAIL",
+      "expected_min_high": 1,
+      "test_command": "python3 scripts/humanize_check.py {input_file}"
+    },
+    {
+      "id": "S3_connector_hit",
+      "section": "3 표현금지",
+      "description": "접속 비대·연결어 남용 검출 (MISC_BAN)",
+      "input": "한편 이를 통해 게다가 나아가 정리하면 핵심은 이렇습니다.",
+      "expected_status": "FAIL",
+      "expected_min_total": 1,
+      "test_command": "python3 scripts/humanize_check.py {input_file}"
+    },
+    {
+      "id": "S_allow_signature",
+      "section": "ALLOW",
+      "description": "형 시그니처 부사 면제 — HIGH 적발 0 (입니다체 종결)",
+      "input": "정말 확실히 진짜 딱 솔직히 사실 근데 그냥 다시 봅니다.",
+      "expected_status": "PASS",
+      "expected_max_high": 0,
+      "test_command": "python3 scripts/humanize_check.py {input_file}"
+    },
+    {
+      "id": "S3_no_work_label_validate",
+      "section": "3 표현금지",
+      "description": "산출물 작업라벨 스캐너 적발 (validate.py --check-output)",
+      "input": "레이어 구조를 트랙별로 INV 13 기준에 맞춰 정리했다.",
+      "expected_status": "FAIL",
+      "expected_min_hits": 1,
+      "test_command": "python3 scripts/validate.py --check-output {input_file}"
     }
   ]
 }
